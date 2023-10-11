@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hex to Decimal Converter</title>
+</head>
+<body>
+    <h1>Hex to Decimal Converter</h1>
+    <h2>Made by</h2>
+    <h3>Ronald Franco Galendez</h3>
+    <h3>Ace Echeveria</h3>
+    <h3>Kynehl Misajon</h3>
+    <h3>Brandon Ian Gimolatan</h3>
+    <input type="text" id="hexInput" placeholder="hi po sir ;)" />
+    <button onclick="convertHexToDecimal()">Convert</button>
+    <p id="decimalOutput"></p>
+    <script>
+        function convertHexToDecimal() {
+            var hexInput = document.getElementById("hexInput").value;
+            var wholePart = parseInt(hexInput, 16);
+            var fractionalPart = parseInt(hexInput.split('.')[1] | '0', 16) / 16 ** (hexInput.split('.')[1] || '0').length;
+
+            var decimalValue = wholePart+fractionalPart;
+            document.getElementById("decimalOutput").innerText ="Decimal:" + decimalValue; }
+ </script>
+</body>
+</html>
